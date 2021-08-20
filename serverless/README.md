@@ -29,23 +29,15 @@ aws s3api create-bucket --bucket <my-bucket-name> --region <my-region> \
 ### 2. Pack template with SAM
 
 ```
-sam package \
---template-file template.yaml \
---output-template-file packaged.yaml \
---s3-bucket <my-bucket-name>
+sam package --template-file template.yaml --s3-bucket <my-bucket-name>
 ```
-DO NOT run the output from above command, proceed to next step.
 
 ### 3. Deploy Cloudformation with SAM
 
-Replace `<my-stack-name>` with your stack name.
-
 ```
-sam deploy \
---template-file packaged.yaml \
---stack-name <my-stack-name> \
---capabilities CAPABILITY_IAM
+sam deploy --guided
 ```
+* Follow the prompts
 
 On completion, save the following values:
 1. `WebSocketURI`, used in the demo configuration file (`config.js`), to send/receive chat messages
