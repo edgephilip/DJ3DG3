@@ -4,7 +4,7 @@
 :root {
   --section-max-width: auto;
   --color--primary:  #000;
-  --color-bg-base: #F7F7F7;
+  --color-bg-base: #000;
   --color-bg-modal-overlay: rgba(185,185,192,.9);
 }
 
