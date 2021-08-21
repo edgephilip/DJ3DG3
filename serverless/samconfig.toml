@@ -1,0 +1,11 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "aws-ivs-dj3dg3"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-e79iop1ecm19"
+s3_prefix = "aws-ivs-dj3dg3"
+region = "us-west-2"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+parameter_overrides = "TableName=\"simplechat_connections\""

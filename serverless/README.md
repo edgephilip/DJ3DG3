@@ -22,8 +22,8 @@ For additional help on configuring, please see https://docs.aws.amazon.com/cli/l
 * Replace `<my-region>` with your region name.
 
 ```
-aws s3api create-bucket --bucket <my-bucket-name> --region <my-region> \
---create-bucket-configuration LocationConstraint=<my-region>
+aws s3api create-bucket --bucket ivs-serverless --region us-west-2 \
+--create-bucket-configuration LocationConstraint=us-west-2
 ```
 
 ### 2. Pack template with SAM
@@ -32,7 +32,7 @@ aws s3api create-bucket --bucket <my-bucket-name> --region <my-region> \
 sam package \
 --template-file template.yaml \
 --output-template-file packaged.yaml \
---s3-bucket <my-bucket-name>
+--s3-bucket ivs-serverless
 ```
 DO NOT run the output from above command, proceed to next step.
 
@@ -43,7 +43,7 @@ Replace `<my-stack-name>` with your stack name.
 ```
 sam deploy \
 --template-file packaged.yaml \
---stack-name <my-stack-name> \
+--stack-name aws-ivs \
 --capabilities CAPABILITY_IAM
 ```
 

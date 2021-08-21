@@ -132,7 +132,7 @@ class Chat extends Component {
     return (
       <React.Fragment>
         <header>
-          <h1>Simple Live Chat demo</h1>
+          <h1>DJ 3DG3</h1>
         </header>
         <div className="main full-width full-height chat-container">
           <div className="content-wrapper mg-2">
