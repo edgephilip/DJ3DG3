@@ -78,14 +78,15 @@ class VideoPlayer extends Component {
     // Setup stream and play
     player.setAutoplay(true);
     player.load(config.PLAYBACK_URL);
-    player.setVolume(0.5);
+    player.setVolume(.5);
+    //player.userActive(true);
   }
 
   render() {
     return (
       <div className="player-wrapper">
         <div className="aspect-169 pos-relative full-width full-height">
-          <video id="video-player" className="video-elem pos-absolute full-width" playsInline muted></video>
+          <video id="video-player" className="video-elem pos-absolute full-width" muted="false" playInline controls></video>
         </div>
       </div>
     )
