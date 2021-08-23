@@ -29,23 +29,29 @@ aws s3api create-bucket --bucket ivs-serverless --region us-west-2 \
 ### 2. Pack template with SAM
 
 ```
+<<<<<<< HEAD
 sam package \
 --template-file template.yaml \
 --output-template-file packaged.yaml \
 --s3-bucket ivs-serverless
+=======
+sam package --template-file template.yaml --s3-bucket <my-bucket-name>
+>>>>>>> ac26bba4bed349128512009a729ef96e95953f5c
 ```
-DO NOT run the output from above command, proceed to next step.
 
 ### 3. Deploy Cloudformation with SAM
 
-Replace `<my-stack-name>` with your stack name.
-
 ```
+<<<<<<< HEAD
 sam deploy \
 --template-file packaged.yaml \
 --stack-name aws-ivs \
 --capabilities CAPABILITY_IAM
+=======
+sam deploy --guided
+>>>>>>> ac26bba4bed349128512009a729ef96e95953f5c
 ```
+* Follow the prompts
 
 On completion, save the following values:
 1. `WebSocketURI`, used in the demo configuration file (`config.js`), to send/receive chat messages
